@@ -1,0 +1,215 @@
+/* 全てのhtmlに対して */
+*{
+  box-sizing: border-box;
+}
+
+p{
+  font-size: 16px;
+  
+}
+
+body{
+  color: #1d242b;
+  font-family: "Noto Sans JP",
+  "YuGothic", "YuGothic", "Hiragino Kaku Gothic Pro", "Meiryo", verdana, "Osaka", "MS PGothic", Sans-Serif;
+  max-width: 1080px;
+  margin: 0 auto 0 auto;
+}
+
+/* header */
+#header{
+  display: flex;
+}
+
+.tel{
+  font-size: 24px;
+  color: #0077c0;
+  font-weight: bold;
+}
+
+#nav-pc ul{
+  display: flex;
+  justify-content: space-between;
+  /* 項目の間に仕切りラインを入れたい */
+}
+
+#nav-pc li{
+  list-style: none;
+  border-left: 1px　solid #0077c0;
+  padding: 0 10px;
+}
+
+#nav-pc li:last-child{
+  border-right: 1px　solid #0077c0;
+}
+
+#nav-pc > a{
+  text-decoration: none;
+  /* 反映しない */
+}
+
+#nav-pc >　a:hover{
+  color: #0077c0;
+  
+  /* 反映しない */
+}
+
+
+/* main */
+#main-visual > img{
+  /* 画像のサイズ調整 */
+  height: 434px;
+  width: 1440px;
+  position: relative;
+}
+
+#main-visual > h1{
+  color: #ffffff;
+  font-size: 40px;
+  text-align: left;
+  line-height: 60px;
+    /* 文字の位置を上下中央・左寄席にしたい */
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top:50%;
+  right: 0%;
+  transform: translateY(-50%);
+  /* 文字の影の透明度を上げたい、色を薄くしたい */
+  text-shadow: 2px 2px 8px #1d242b ;
+}
+
+.index-h2{
+  margin: 70px auto 36px auto;
+  font-size: 28px;
+  /*中央に配置したい */
+  text-align: center;
+}
+
+.index-h2 > img{
+  /* タイトル文字とlineの距離を縮めたい */
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+}
+
+/* concept */
+#index-concept {
+  display: flex;
+}
+
+#concept-left > img {
+  position: relative;
+}
+
+#concept-left > p{
+  /* relativeの基準が.concept-leftではなbodyにかかる */
+  position: absolute;
+  top: 0px;
+  transform: translateY(-50%);
+}
+
+/* ページ遷移ボタンのやり方 */
+
+/* service */
+#service{
+  background-color: #c7eeff;
+  /* 背景色の上下の幅の設定方法がわからない */
+  padding: 50px 0 70px 0;
+}
+
+.service-list{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* 院長挨拶 */
+#index-comment{
+  display: flex;
+}
+
+.comment-right > img{
+  position: relative;
+  z-index: 10;
+}
+
+.comment-right >p{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate (-50%, -50%);
+  z-index: 11;
+  width: 660px;
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+
+.clinic-name{
+  /* 右寄せにしたい */
+  text-align: right;
+}
+
+.orner-name{
+  /* 右寄せにしたい */
+  text-align: right;
+  font-size: 18px;
+}
+
+/* information */
+#information{
+  background-color: #c7eeff;
+}
+
+h4{
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 66px;
+}
+
+/* footer */
+/* lineの入れ方がわからない */
+#footer-top{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-middle{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-middle > iframe{
+  margin-right: 27px;
+}
+
+/* 営業時間の表 */
+/* 表の作り方がわからない */
+.hours-table{
+  width: 534px;
+}
+
+.tableheader{
+  background-color: #c7eeff;
+}
+.tablerow{
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #2710d5;
+}
+
+.tel-booking{
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-right > div > p > span{
+  font-size: 24px;
+  color: #0077c0;
+  font-weight: bold;
+}
+
+/* 電話マークを入れたい */
+.footer-right > div > p > span ::before{
+  content: url(img/h3-line.png);
+}
