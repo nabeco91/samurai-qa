@@ -19,12 +19,26 @@ body{
 /* header */
 #header{
   display: flex;
+  justify-content: space-between;
+}
+
+.headerlogo{
+  width: 329px;
+}
+
+.header-right{
+  display: flex;
 }
 
 .tel{
   font-size: 24px;
   color: #0077c0;
   font-weight: bold;
+}
+
+.tel > p ::before{
+  /* 電話マークの画像アイコンが電話番号の前に表示されない */
+  content: url(img/bi_telephone-fill.png);
 }
 
 #nav-pc ul{
@@ -43,15 +57,13 @@ body{
   border-right: 1px　solid #0077c0;
 }
 
-#nav-pc > a{
+#nav-pc > ul > li >a{
   text-decoration: none;
   /* 反映しない */
 }
 
-#nav-pc >　a:hover{
+#nav-pc >ul > li > a:hover{
   color: #0077c0;
-  
-  /* 反映しない */
 }
 
 
@@ -174,7 +186,12 @@ h4{
   flex-wrap: wrap;
 }
 
+.footerlogo{
+  width: 312px;
+}
+
 .footer-middle{
+  /* マップと表が横並びにならない */
   display: flex;
   flex-wrap: wrap;
 }
