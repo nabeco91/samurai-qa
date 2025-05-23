@@ -36,7 +36,7 @@ body{
   font-weight: bold;
 }
 
-.tel > p ::before{
+.tel::before{
   /* 電話マークの画像アイコンが電話番号の前に表示されない */
   content: url(img/bi_telephone-fill.png);
 }
@@ -78,17 +78,25 @@ body{
 #main-visual > h1{
   color: #ffffff;
   font-size: 40px;
-  text-align: left;
-  line-height: 60px;
-    /* 文字の位置を上下中央・左寄席にしたい */
   position: absolute;
-  margin: 0;
-  padding: 0;
-  top:50%;
-  right: 0%;
+  top: 55%;
+  left: 50%; /* 左寄りに */
   transform: translateY(-50%);
-  /* 文字の影の透明度を上げたい、色を薄くしたい */
+  color: white; /* 背景に合わせて調整 */
+  font-size: 2em; /* 好みに応じて */
+  line-height: 1.4;
   text-shadow: 2px 2px 8px #1d242b ;
+  /* color: #ffffff;
+  font-size: 2em;
+  /* text-align: left; */
+  /* line-height: 1.4; */
+    /* 文字の位置を上下中央・左寄席にしたい */
+  /* position: absolute; */
+  /* top: 55px; */
+  /* right: 50%; */
+  /* transform: translateY(-50%); */
+  /* 文字の影の透明度を上げたい、色を薄くしたい */
+  /* text-shadow: 2px 2px 8px #1d242b４ ; */
 }
 
 .index-h2{
@@ -110,15 +118,28 @@ body{
   display: flex;
 }
 
-#concept-left > img {
+#concept-left{
   position: relative;
+  display: inline-block;
+}
+
+#concept-left > img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 #concept-left > p{
-  /* relativeの基準が.concept-leftではなbodyにかかる */
   position: absolute;
-  top: 0px;
-  transform: translateY(-50%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  margin: 0;
+  padding: 1em;
+  font-size: 1em;
+  line-height: 1.6;
+  width: 90%;
+  background: transparent;
 }
 
 /* ページ遷移ボタンのやり方 */
@@ -141,8 +162,14 @@ body{
   display: flex;
 }
 
-.comment-right > img{
+.comment-right{
   position: relative;
+  display: inline-block
+}
+
+.comment-right > img{
+  position: absolute;
+  display: block;
   z-index: 10;
 }
 
@@ -150,9 +177,13 @@ body{
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate (-50%, -50%);
-  z-index: 11;
-  width: 660px;
+  transform: translate(-50%,-50%);
+  margin: 0;
+  padding: 1em;
+  font-size: 1em;
+  line-height: 1.6;
+  width: 90%;
+  background: transparent;
   flex-wrap: wrap;
   font-size: 14px;
 }
@@ -227,6 +258,11 @@ h4{
 }
 
 /* 電話マークを入れたい */
-.footer-right > div > p > span ::before{
-  content: url(img/h3-line.png);
+.footer-right > div > p > span::before{
+  content: url(img/bi_telephone-fill.png);
+}
+
+.copyright{
+  margin-top: ;
+  text-align: center;
 }
