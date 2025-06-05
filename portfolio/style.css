@@ -1,0 +1,304 @@
+/* ----------
+  body
+---------- */
+body{
+  background-color: #fff6ed;
+font-family: "Montserrat","Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
+font-size: 15px;
+color: #345075;
+text-align: center;
+}
+
+.h2-home{
+  color: #345075;
+  font-size: 38px;
+  letter-spacing: 0.05em;
+  padding-top: 50px; 
+  border-bottom: 3px solid #fc5a58; /* 線が長すぎる */
+}
+
+.h2-home-beige{
+  color: #fff6ed;
+  font-size: 38px;
+  letter-spacing: 0.05em;
+  padding-top: 70px;
+  border-bottom: 3px solid #fc5a58; /* 線が長すぎる */
+}
+
+/* ----------
+  header
+---------- */
+header{
+  text-align: center;
+  position: relative;
+  height: 80px;
+  background-color: #345075;
+  color: #fff6ed;
+  margin:0;
+}
+
+.header-container{
+  position: absolute;
+  top: 15%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.header-container > a {
+  text-decoration: none;
+  color: #fff6ed;
+  padding-left: 20px;
+}
+
+#nav > ul{
+  display: flex;
+  justify-content: space-between;
+  padding-right: 20px;
+}
+
+.nav-item{
+  list-style: none;
+  padding-left: 40px;
+}
+
+.nav-item > a {
+  text-decoration: none;
+  color: #fff6ed;
+}
+
+.nav-item > a:hover,
+.nav-item > a:active{
+  border-bottom: 2px solid #fff6ed;
+  padding: 5px 0px;
+}
+
+/* ----------
+  floater button
+---------- */
+#float-button{
+  position: fixed;
+  top: 60%;
+  right: 10px;
+  overflow: hidden;
+  z-index: 1;
+  padding: 20px 10px;
+  background-color: #fc5a58;
+  color: #fff6ed;
+  border: 2px solid #fc5a58;
+  font-size: 18px;
+  letter-spacing: 0.15em;
+  writing-mode: vertical-rl;
+  text-orientation: sideways-right;
+  transition: .5s;
+}
+
+#float-button::before{
+  content: "";
+  display: block; 
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #fff6ed;
+  transform: translateY(-100%);
+  transition: .5s;
+  z-index: -1;
+}
+
+#float-button:hover{
+  color: #fc5a58;
+  font-weight: bold;
+  background: #fff6ed;
+  border: 2px solid #fc5a58;
+}
+
+#float-button:hover::before{
+  transform: translateY(0);
+}
+
+/* ----------
+  main
+---------- */
+
+/* ----------
+  works
+---------- */
+
+.works-button{
+  background-color: #fff6ed;
+  border: 2px solid #345075;
+  border-radius: 28px;
+  width: 246px;
+  height: 52px;
+  margin-top: 40px;
+  text-decoration: none;
+  color: #345075;
+  letter-spacing: 0.15em;
+}
+
+.works-button::after{ /* ＞をボタン右側に表示させたい */
+  content:" ";
+  width: 20px;
+  background: url(img/icon-arrow-right.png) no-repeat center center/contain;
+  display: inline;
+}
+
+.works-button:hover {
+    background-color: #345075;
+    transform: scale(1.2);
+    color: #fff6ed;
+    letter-spacing: 0.15em;
+  }
+  
+/* ----------
+  skill
+---------- */
+.skill{
+  background-color: #345075;
+  color: #fff6ed;
+}
+
+.skill-container-top{  /*上の段*/
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin-top: 15px;
+  max-width: 975px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.skill-item{
+  display: flex;
+  align-items: center;
+  width: 381px;
+}
+
+.skill-item > img{
+  width: 70px;
+  padding: 100% auto; /* アイコン丸背景のサイズを大きくしたい */
+  background-color: #fff6ed; 
+  border-radius: 45px;
+}
+
+.skill-text{
+  text-align: left;
+  padding-left: 20px;
+}
+
+.skill-text > p >span{
+  font-weight: bold;
+}
+
+.skill-container-bottom{/* 下の段 */
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin-top: 15px;
+  padding-bottom: 50px;
+  max-width: 975px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ----------
+  about
+---------- */
+.about-container{
+  margin-top: 40px;
+  max-width: 975px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.about-container::before{
+  content: "";
+  width: 76px;
+  height: 66px;
+  background: url(img/about-brackets.png) no-repeat center center/contain;
+  display: block;
+}
+
+.about-container > p {
+  flex: wrap;
+  text-align: left;
+  margin-top: -15px;
+  margin-left: 70px;
+  width: 724px;
+}
+
+.about-container::after{
+  content: "";
+  width: 76px;
+  height: 66px;
+  background: url(img/about-brackets-end.png) no-repeat center center/contain;
+  display: block;
+  margin-top:-40px;
+  margin-left: 780px;
+}
+
+/* ----------
+  contact
+---------- */
+.contact{
+  text-align: center;
+  background-color: #345075;
+}
+
+.contact > p{
+  color: #fff6ed;
+  font-size: 18px;
+}
+
+.button-contact{
+  background-color:#345075;
+  border: 2px solid #fff6ed;
+  width: 246px;
+  height: 52px;
+  border-radius: 28px;
+  text-decoration: none;
+  color: #fff6ed;
+  letter-spacing: 0.15em;
+  margin: 50px auto;
+}
+
+.button-contact:hover{
+  background-color: #fff6ed;
+  transform: scale(1.2);
+  color: #345075;
+  letter-spacing: 0.15em;
+  font-weight: bold;
+}
+
+.button-contact::after{ /* ＞をボタン右側に表示させたい */
+  content:" ";
+  width: 20px;
+  background: url(img/icon-arrow-right.png) no-repeat center center/contain;
+  display: inline;
+}
+
+/* ----------
+  footer
+---------- */
+.footer-top{
+  /* position: relative; リンクの対象エリアの幅を広げたい*/
+  margin-top: 60px;
+  background-color: #345075;
+}
+
+.footer-top >a {
+  /* position: absolute; リンクの対象エリアの幅を広げたい*/
+  width: 100%;
+}
+
+.footer-top > a >img{
+  width: 50px;
+}
+
+.copyright{
+  font-size: 12px;
+}
