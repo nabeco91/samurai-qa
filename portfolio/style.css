@@ -13,16 +13,20 @@ text-align: center;
   color: #345075;
   font-size: 38px;
   letter-spacing: 0.05em;
-  padding-top: 50px; 
+  margin: 0 auto;
+  padding-top: 50px;
   border-bottom: 3px solid #fc5a58; /* 線が長すぎる */
+  width: fit-content;
 }
 
 .h2-home-beige{
   color: #fff6ed;
   font-size: 38px;
   letter-spacing: 0.05em;
+  margin: 0 auto;
   padding-top: 70px;
   border-bottom: 3px solid #fc5a58; /* 線が長すぎる */
+  width: fit-content;
 }
 
 /* ----------
@@ -126,6 +130,9 @@ header{
 /* ----------
   works
 ---------- */
+.works{
+  margin-bottom: 120px;
+}
 
 .works-button{
   background-color: #fff6ed;
@@ -133,17 +140,24 @@ header{
   border-radius: 28px;
   width: 246px;
   height: 52px;
-  margin-top: 40px;
+  margin-top: 50px;
   text-decoration: none;
   color: #345075;
   letter-spacing: 0.15em;
+  display: inline-block;
+  position: relative;
 }
 
-.works-button::after{ /* ＞をボタン右側に表示させたい */
+.works-button::after{ 
   content:" ";
-  width: 20px;
-  background: url(img/icon-arrow-right.png) no-repeat center center/contain;
-  display: inline;
+  width: 10px;
+  height: 10px;
+  border-top: 1.5px solid;
+  border-right: 1.5px solid;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 17px;
+  right: 10%;
 }
 
 .works-button:hover {
@@ -159,14 +173,15 @@ header{
 .skill{
   background-color: #345075;
   color: #fff6ed;
+  padding-bottom: 80px;
 }
 
 .skill-container-top{  /*上の段*/
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  margin-top: 15px;
   max-width: 975px;
+  margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -179,7 +194,7 @@ header{
 
 .skill-item > img{
   width: 70px;
-  padding: 100% auto; /* アイコン丸背景のサイズを大きくしたい */
+  padding:7px;
   background-color: #fff6ed; 
   border-radius: 45px;
 }
@@ -207,38 +222,56 @@ header{
 /* ----------
   about
 ---------- */
+.about{
+  margin-bottom: 100px;
+}
+
 .about-container{
+  position: relative;
   margin-top: 40px;
-  max-width: 975px;
   margin-left: auto;
   margin-right: auto;
-
+  margin-bottom: 50px;
+  max-width: 840px;
+  height: 320px;
 }
 
 .about-container::before{
+  position: absolute;
+  top: 0;
+  left: 0;
   content: "";
   width: 76px;
   height: 66px;
   background: url(img/about-brackets.png) no-repeat center center/contain;
-  display: block;
+  margin-top: 0;
+  margin-left: 0;
 }
 
 .about-container > p {
+  position: absolute;
+  top: 30px;
+  left: 60px;
+  /* top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%); */
   flex: wrap;
   text-align: left;
-  margin-top: -15px;
-  margin-left: 70px;
-  width: 724px;
+  line-height: 32px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 724px;
 }
 
 .about-container::after{
+  position: absolute;
+  bottom: 10px;
+  right: 0;
   content: "";
   width: 76px;
   height: 66px;
   background: url(img/about-brackets-end.png) no-repeat center center/contain;
-  display: block;
-  margin-top:-40px;
-  margin-left: 780px;
+  margin: 0;  
 }
 
 /* ----------
@@ -247,6 +280,7 @@ header{
 .contact{
   text-align: center;
   background-color: #345075;
+  padding-bottom: 80px;
 }
 
 .contact > p{
@@ -255,6 +289,7 @@ header{
 }
 
 .button-contact{
+  text-decoration: none;
   background-color:#345075;
   border: 2px solid #fff6ed;
   width: 246px;
@@ -263,10 +298,23 @@ header{
   text-decoration: none;
   color: #fff6ed;
   letter-spacing: 0.15em;
-  margin: 50px auto;
+  margin-top: 50px;
+  position: relative;
 }
 
-.button-contact:hover{
+.button-contact::after{ /* ＞をボタン右側に表示させたい */
+  content:" ";
+  width: 10px;
+  height: 10px;
+  border-top: 1.5px solid #fff6ed;
+  border-right: 1.5px solid #fff6ed;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 18px;
+  right: 10%;
+}
+  
+.button-contact:hover {
   background-color: #fff6ed;
   transform: scale(1.2);
   color: #345075;
@@ -274,11 +322,15 @@ header{
   font-weight: bold;
 }
 
-.button-contact::after{ /* ＞をボタン右側に表示させたい */
+.button-contact::after:hover{
   content:" ";
-  width: 20px;
-  background: url(img/icon-arrow-right.png) no-repeat center center/contain;
-  display: inline;
+  width: 10px;
+  height: 10px;
+  border-top: 1.5px solid;
+  border-right: 1.5px solid;
+  transform: rotate(45deg);
+  top: 17px;
+  right: 10%;
 }
 
 /* ----------
@@ -286,7 +338,7 @@ header{
 ---------- */
 .footer-top{
   /* position: relative; リンクの対象エリアの幅を広げたい*/
-  margin-top: 60px;
+  margin-top: 30px;
   background-color: #345075;
 }
 
