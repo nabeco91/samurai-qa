@@ -228,6 +228,7 @@ header{
 
 .about-container{
   position: relative;
+  padding:  20px 50px 20px; /*両サイドにスペースを確保*/
   margin-top: 40px;
   margin-left: auto;
   margin-right: auto;
@@ -238,7 +239,7 @@ header{
 
 .about-container::before{
   position: absolute;
-  top: 0;
+  top: -50px; /*上下の空間*/
   left: 0;
   content: "";
   width: 76px;
@@ -249,23 +250,16 @@ header{
 }
 
 .about-container > p {
-  position: absolute;
-  top: 30px;
-  left: 60px;
-  /* top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%); */
   flex: wrap;
   text-align: left;
   line-height: 32px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto 0 auto;
   max-width: 724px;
 }
 
 .about-container::after{
   position: absolute;
-  bottom: 10px;
+  bottom: 50px; /*上下の空間*/
   right: 0;
   content: "";
   width: 76px;
@@ -278,7 +272,6 @@ header{
   contact
 ---------- */
 .contact{
-  text-align: center;
   background-color: #345075;
   padding-bottom: 80px;
 }
@@ -286,6 +279,7 @@ header{
 .contact > p{
   color: #fff6ed;
   font-size: 18px;
+  margin-top: 40px;
 }
 
 .button-contact{
@@ -323,11 +317,11 @@ header{
 }
 
 .button-contact::after:hover{
-  content:" ";
+  content: " ";
   width: 10px;
   height: 10px;
-  border-top: 1.5px solid;
-  border-right: 1.5px solid;
+  border-top: 1.5px solid #345075;
+  border-right: 1.5px solid #345075;
   transform: rotate(45deg);
   top: 17px;
   right: 10%;
