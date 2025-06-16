@@ -1,0 +1,394 @@
+/* ----------
+  HTML
+---------- */
+html {
+  scroll-padding-top: 80px; /* ヘッダーの高さに合わせて設定 */
+  /* スムーズスクロールを有効にする場合は以下も追加 */
+  scroll-behavior: smooth;
+}
+
+/* ----------
+  body
+---------- */
+body{
+  background-color: #fff6ed;
+  font-family: "Montserrat","Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
+  font-size: 15px;
+  color: #345075;
+  text-align: center;
+  padding-top: 80px;
+}
+
+.h2-home{
+  color: #345075;
+  font-size: 38px;
+  letter-spacing: 0.05em;
+  margin: 0 auto;
+  padding-top: 56px;
+  border-bottom: 3px solid #fc5a58; /* 線が長すぎる */
+  width: fit-content;
+}
+
+.h2-home-beige{
+  color: #fff6ed;
+  font-size: 38px;
+  letter-spacing: 0.05em;
+  margin: 0 auto;
+  padding-top: 72px;
+  border-bottom: 3px solid #fc5a58; /* 線が長すぎる */
+  width: fit-content;
+}
+
+/* ----------
+  header
+---------- */
+#header{
+  text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #345075;
+  color: #fff6ed;
+  margin: 0;
+  border-bottom: 1px solid #fff6ed;
+  z-index: 100;
+}
+
+.header-container{
+  position: absolute;
+  top: 15%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 20px;
+}
+
+.header-container > a {
+  text-decoration: none;
+  color: #fff6ed;
+  padding-left: 20px;
+}
+
+#nav > ul{
+  display: flex;
+  justify-content: space-between;
+  padding-right: 20px;
+}
+
+.nav-item{
+  list-style: none;
+  padding-left: 40px;
+}
+
+.nav-item > a {
+  text-decoration: none;
+  color: #fff6ed;
+}
+
+.nav-item > a:hover,
+.nav-item > a:active{
+  border-bottom: 2px solid #fff6ed;
+  padding: 5px 0px;
+  cursor: default;
+}
+
+/* ----------
+  floater button
+---------- */
+#float-button{
+  position: fixed;
+  top: 60%;
+  right: 10px;
+  overflow: hidden;
+  z-index: 1;
+  padding: 20px 10px;
+  background-color: #fc5a58;
+  color: #fff6ed;
+  border: 2px solid #fc5a58;
+  font-size: 18px;
+  letter-spacing: 0.15em;
+  writing-mode: vertical-rl;
+  text-orientation: sideways-right;
+  transition: .5s;
+}
+
+#float-button::before{
+  content: "";
+  display: block; 
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #fff6ed;
+  transform: translateY(-100%);
+  transition: .5s;
+  z-index: -1;
+}
+
+#float-button:hover{
+  color: #fc5a58;
+  font-weight: bold;
+  background: #fff6ed;
+  border: 2px solid #fc5a58;
+}
+
+#float-button:hover::before{
+  transform: translateY(0);
+}
+
+/* ----------
+  main
+---------- */
+.main-animation{
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease-in-out, transform 1s ease-out;
+}
+.main-animation.fade-in{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ----------
+  works
+---------- */
+.works{
+  margin-bottom: 120px;
+}
+
+.works-button{
+  background-color: #fff6ed;
+  border: 2px solid #345075;
+  border-radius: 28px;
+  width: 246px;
+  height: 52px;
+  margin-top: 50px;
+  text-decoration: none;
+  color: #345075;
+  letter-spacing: 0.15em;
+  display: inline-block;
+  position: relative;
+}
+
+.works-button::after{ 
+  content:" ";
+  width: 10px;
+  height: 10px;
+  border-top: 1.5px solid;
+  border-right: 1.5px solid;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 17px;
+  right: 10%;
+}
+
+.works-button:hover {
+    background-color: #345075;
+    transform: scale(1.2);
+    color: #fff6ed;
+    letter-spacing: 0.15em;
+  }
+  
+/* ----------
+  skill
+---------- */
+#skill{
+  background-color: #345075;
+  color: #fff6ed;
+  padding-bottom: 80px;
+}
+
+
+.skill-container-top{  /*上の段*/
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  max-width: 975px;
+  
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.skill-item{
+  display: flex;
+  align-items: center;
+  width: 381px;
+  /* Fade-in start from here*/
+  opacity: 0;
+  transform: translateY(100px); /*100px下にズレた状態*/
+  transition: opacity 1s ease-out, transform 2s ease-out;
+  /* ↑不透明度は1秒かけて、位置は2秒かけて変化します。「ease-out」はアニメーションの終わりがゆっくりになるように設定しています。 */
+  transition-delay: calc(var(--delay * 1.5s));
+  /* ↑各行のアニメーションを遅らせるためのプロパティです。--delay はカスタムプロパティ（CSS変数）で、JavaScriptで設定される値に応じて遅延時間を計算します。calc(var(--delay) * 1.5s) により、行ごとに1.5秒ず */
+}
+
+.skill-item-fadein{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.skill-item > img{
+  width: 70px;
+  padding:7px;
+  background-color: #fff6ed; 
+  border-radius: 45px;
+}
+
+.skill-text{
+  text-align: left;
+  padding-left: 20px;
+}
+
+.skill-text > p >span{
+  font-weight: bold;
+}
+
+.skill-container-bottom{/* 下の段 */
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin-top: 15px;
+  padding-bottom: 50px;
+  max-width: 975px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ----------
+  about
+---------- */
+#about{
+  margin-bottom: 72px;
+}
+
+.about-container{
+  position: relative;
+  padding:  20px 50px 20px; /*両サイドにスペースを確保*/
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  max-width: 840px;
+  height: 320px;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.about-container.about-fadein{
+  opacity: 1;
+}
+
+.about-container::before{
+  position: absolute;
+  top: -50px; /*上下の空間*/
+  left: 0;
+  content: "";
+  width: 76px;
+  height: 66px;
+  background: url(img/about-brackets.png) no-repeat center center/contain;
+  margin-top: 0;
+  margin-left: 0;
+}
+
+.about-container > p {
+  flex: wrap;
+  text-align: left;
+  line-height: 32px;
+  margin: 0 auto 0 auto;
+  max-width: 724px;
+}
+
+.about-container::after{
+  position: absolute;
+  bottom: 50px; /*上下の空間*/
+  right: 0;
+  content: "";
+  width: 76px;
+  height: 66px;
+  background: url(img/about-brackets-end.png) no-repeat center center/contain;
+  margin: 0;  
+}
+
+/* ----------
+  contact
+---------- */
+.contact{
+  background-color: #345075;
+  padding-bottom: 80px;
+}
+
+.contact > p{
+  color: #fff6ed;
+  font-size: 18px;
+  margin-top: 40px;
+}
+
+.button-contact{
+  text-decoration: none;
+  background-color:#345075;
+  border: 2px solid #fff6ed;
+  width: 246px;
+  height: 52px;
+  border-radius: 28px;
+  text-decoration: none;
+  color: #fff6ed;
+  letter-spacing: 0.15em;
+  margin-top: 50px;
+  position: relative;
+}
+
+.button-contact::after{ /* ＞をボタン右側に表示させたい */
+  content:" ";
+  width: 10px;
+  height: 10px;
+  border-top: 1.5px solid #fff6ed;
+  border-right: 1.5px solid #fff6ed;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 18px;
+  right: 10%;
+}
+  
+.button-contact:hover {
+  background-color: #fff6ed;
+  transform: scale(1.2);
+  color: #345075;
+  letter-spacing: 0.15em;
+  font-weight: bold;
+}
+
+.button-contact:hover::after{
+  content: " ";
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #345075;
+  border-right: 2px solid #345075;
+  transform: rotate(45deg);
+  top: 17px;
+  right: 10%;
+}
+
+/* ----------
+  footer
+---------- */
+.footer-top> button{
+  margin-top: 30px;
+  background-color: #345075;
+  width: 100%;
+}
+
+.footer-top > button >img{
+  width: 50px;
+}
+
+.footer-top> button:hover{
+  cursor: pointer;
+}
+
+.copyright{
+  font-size: 12px;
+}
