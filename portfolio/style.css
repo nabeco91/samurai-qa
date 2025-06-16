@@ -1,3 +1,14 @@
+/*
+Theme Name: My Portfolio Theme
+Theme URI: http://localhost:10018 (あなたのサイトURL)
+Author: Ayumi
+Author URI: http://localhost:10018 (あなたのポートフォリオURL)
+Description: これはNABWORKSのポートフォリオサイト用のカスタムテーマです。
+Version: 1.0.0
+Text Domain: my-portfolio-theme
+*/
+
+
 /* ----------
   HTML
 ---------- */
@@ -12,7 +23,7 @@ html {
 ---------- */
 body{
   background-color: #fff6ed;
-  font-family: "Montserrat","Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
+  font-family: "Montserrat","Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans","Meiryo",sans-serif;
   font-size: 15px;
   color: #345075;
   text-align: center;

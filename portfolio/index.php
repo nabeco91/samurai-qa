@@ -1,8 +1,7 @@
 <?php get_header( ); ?>
 
-<body>
     <!-- floater button -->
-    <a href="contact.html"><button id="float-button">CONTACT</button>
+    <a href="<?php echo home_url( );?>/contact/"><button id="float-button">CONTACT</button>
     </a>
 
     <!-- main -->
@@ -15,7 +14,7 @@
     <section class="works">
       <h2 class="h2-home">WORKS</h2>
       <!-- WP投稿をスライダー表示 -->
-      <a href="<?php echo get_template_directory_uri( );?>/works.html" class="works-button-link">
+      <a href="<?php echo home_url();?>/works/" class="works-button-link">
         <button class="works-button">WORKS一覧へ</button>
       </a>
     </section>
@@ -24,7 +23,7 @@
     <!-- skill start -->
     <section id="skill">
       <h2 class="h2-home-beige">SKILL</h2>
-        <div class="skill.container">
+        <div class="skill-container">
           <div class="skill-container-top">
             <div class="skill-item">
               <img src="<?php echo get_template_directory_uri( );?>/img/skills/html.png" alt="HTML/CSS">
@@ -79,7 +78,7 @@
     <section class="contact">
       <h2 class="h2-home-beige">CONTACT</h2>
       <p>お問い合わせは、お問い合わせフォームよりお願いいたします。</p>
-      <a href="contact.html" class="contact-button-link">
+      <a href="<?php echo home_url();?>/contact/" class="contact-button-link">
         <button class="button-contact">お問い合わせフォームへ
         </button>
       </a>
