@@ -12,43 +12,11 @@
     
     <!-- works start -->
 
-    <!-- 失敗スライダー<?php
-        //取得したい投稿記事などの条件を引数として渡す
-      $args = array(
-        'post_type'  => 'post',
-        'category_name' => 'work',
-        'post_per_page' => 3,
-      );
-      $the_query = new WP_Query( $args ); // 新しいWP_Queryインスタンスを作成
-
-      $posts_data = array(); //投稿データを格納する配列を初期化
-
-      if ( $the_query -> have_posts())://投稿があるか確認
-        while ($the_query ->have_posts()) : $the_query ->the_post(); //ループ開始
-          $thumbnail_url = '';
-          if (has_post_thumbnail( ) ){
-            $thumbnail_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
-          } else{
-            $thumbnail_url = get_template_directory_uri(  ).'/img/';
-          }
-
-          //各投稿のデータを連想配列として追加
-          $post_data[] = array(
-            'title' => get_the_title(),
-            'link' => get_permalink( ),
-            'thumbnail' => $thumbnail_url,
-          );
-        endwhile;
-        // 使用した投稿データをリセット -->
-        wp_reset_postdata(  );
-      endif;
-    ?> -->
-
     <!-- スライダー表示 -->
     <section class="works">
       <h2 class="h2-home">WORKS</h2>
+
       <!-- WP投稿スライダー -->
-        
         <div class="works-slider-wrapper">
           <?php
             //取得したい投稿記事などの条件を引数として渡す
@@ -71,20 +39,24 @@
                 <ul>
                   <li>
                     <!-- aタグで投稿記事へのリンクを作成 -->
-                    <a href="<?php echo get_permalink(); ?>">
+                    <a href="<?php the_permalink(); ?>">
                       <!-- 投稿記事のタイトルを表示 -->
                       <?php the_title(); ?>
                     </a>
                   </li>
                 </ul>
               </div>
-              <?php endforeach; ?>
-          </div>
-          <?php wp_reset_postdata(); ?><!-- 使用した投稿データをリセット -->
-        <button class="slider-prev">&lt</button>
-        <button class="slider-next">&gt</button>
-      </div>
+              <!-- アイキャッチ画像を表示させたい -->
+              <div>
+                <a href="<?php the_permalink( );?>">
+                  <?php the_post_thumbnail( ); ?>
+                </a>
+              </div>
+          <?php endforeach; ?>
+          <?php wp_reset_postdata(); ?>
+        </div>
       
+
       <!-- moreボタン　-->
       <a href="<?php echo home_url();?>/works/" class="works-button-link">
         <button class="works-button">WORKS一覧へ</button>
