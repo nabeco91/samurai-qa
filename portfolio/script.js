@@ -7,6 +7,20 @@ window.addEventListener('load',function(){
   }
 });
 
+//works fade-in
+const worksAnimation = document.querySelector('.works-container');
+
+window.addEventListener('scroll' ,function(){
+  if(worksAnimation){
+    const worksPosition = worksAnimation.getBoundingClientRect().top;
+    const worksScreenPosition = window.innerHeight / 1.3;
+
+    if(worksPosition < worksScreenPosition){
+      worksAnimation.classList.add('works-container-fadein');  
+    }
+  }
+});
+
 // skill fade-in
 window.addEventListener('scroll', function(){
   const skillItem = document.querySelectorAll('.skill-item');
@@ -19,18 +33,20 @@ window.addEventListener('scroll', function(){
       element.classList.add('skill-item-fadein');
     }
   })
-})
+});
 
 //about fade-in
 const aboutAnimation = document.querySelector('.about-container');
 
 window.addEventListener('scroll',function(){
-  if(aboutAnimation){const position = aboutAnimation.getBoundingClientRect().top; // aboutAnimation の位置を取得
-  const screenPosition = window.innerHeight / 1.3;
+  if(aboutAnimation){
+    const position = aboutAnimation.getBoundingClientRect().top; // aboutAnimation の位置を取得
+    const screenPosition = window.innerHeight / 1.3;
   
-  if(position < screenPosition){
-    aboutAnimation.classList.add('about-fadein')
-  }}
+    if(position < screenPosition){
+      aboutAnimation.classList.add('about-fadein')
+    }
+  }
 });
 
 //scroll to top
@@ -44,4 +60,3 @@ if(scrollToTopBtn){
   });
 };
 
-//hamburger menu

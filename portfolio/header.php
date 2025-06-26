@@ -16,7 +16,7 @@
     </a>
     <nav id="nav">
       <ul>
-        <li class="nav-item"><a href="<?php echo home_url( );?>/works">WORKS</a></li>
+        <li class="nav-item"><a href="<?php echo home_url( );?>/#works">WORKS</a></li>
         <li class="nav-item"><a href="<?php echo home_url( );?>/#skill">SKILL</a></li>
         <li class="nav-item"><a href="<?php echo home_url( );?>/#about">ABOUT</a></li>
         <li class="nav-item"><a href="<?php echo home_url( );?>/contact">CONTACT</a></li>

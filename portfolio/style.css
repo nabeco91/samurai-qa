@@ -166,67 +166,54 @@ body{
 /* ----------
   works
 ---------- */
-.works{
+#works{
   margin-bottom: 120px;
 }
 
-.works-slider-container{
+.works-container{
   width: 80%;
   max-width: 1000px;
   margin: 50px auto;
   position: relative;
-  overflow: hidden; /*スライドがはみ出さないように隠す*/
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   place-content: center;
-  place-items: center;
+  justify-content: space-between;
+  /* 以下フェードイン */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
 
-.works-slider-wrapper{
-  display: flex;
-  transition: transform 0.5s ease-in-out;
+.works-container-fadein{
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.works-slider-item{
-  min-width: 33.33%;
-  box-sizing: border-box; /*paddingとmarginをwidthに含める*/
-  padding: 10px;
-  flex-shrink: 0;/*スライドが縮まらないようにする*/
-  text-align: center;
-  background-color: #ffffff;
+.works-item{
+  padding-bottom: 30px;
+  margin: 0;
 }
 
-.works-slider-item >ul {
-  list-style: none;
-  padding: 0;
+
+.works-item a{
+  text-decoration: none;
+  color: #345075;
+  transition: opacity 0.3s ease, transform 0.3 ease, font-weight 0.3 ease;
 }
 
-.works-slider-item img {
-    max-width: 100%;
-    height: auto; /* 高さを自動調整 */
-    display: block; /* 余分な隙間をなくす */
-    margin: 0 auto 10px auto; /* 中央寄せと下部の余白 */
+.works-item .works-img{
+  opacity: 1;
+  transition: opacity 0.3s ease, transform 0.3,ease;
 }
 
-.slider-prev,
-.slider-next{
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #fc5a58;
-  border: none;
-  padding: 10px 15px;
-  z-index: 10;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.works-item a:hover .works-img{
+  opacity: 0.7;
+  transform: scale(1.05);
 }
 
-.slider-prev{
-  left:10px
-}
-
-.slider-next{
-  right:10px
+.works-item a:hover{
+  font-weight: bold;
 }
 
 .works-button{
@@ -488,6 +475,65 @@ page-contact.php
   color: #345075;
 }
 
-#wpforms-submit-32{
+#wpforms-submit-32.wpforms-submit{
   background-color: #345075;
+  transform: scale(1);
+}
+
+#wpforms-submit-32.wpforms-submit:hover{
+  transform: scale(1.02);
+  background-color: #fc5a58;
+}
+
+.wpforms-container input.wpforms-field-medium{
+  max-width: 100%;
+}
+
+
+/* -------------
+single.php
+-------------- */
+h3{
+  color: #345075;
+  font-weight: bold;
+  font-size: 27px;
+}
+
+.works-post-container{
+  max-width: 1000px;
+  margin-inline: auto;
+  display: grid;
+  place-content: center;
+  place-items: center;
+}
+
+.works-post-container >h3{
+  text-align: left;
+}
+
+.works-post-container >p{
+  text-align: left;
+}
+
+.post-link{
+  width: 70%;
+  display: flex;
+  margin: 50px auto;
+  padding: 0 10px;
+  justify-content: space-between;
+  list-style: none;
+  border-top: 1px solid #345075;
+}
+
+.post-link a{
+  text-decoration: none;
+  color: #345075;
+}
+
+.post-link a:hover{
+  color: #fc5a58;
+}
+
+.post-link li{
+  padding-top: 10px;
 }
