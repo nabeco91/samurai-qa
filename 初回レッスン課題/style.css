@@ -1,0 +1,306 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  text-align: center;
+  align-items: center;
+}
+
+h1,h2,h3,h4,h5{
+  font-family:DIN Condensed;
+}
+
+h1{
+  font-size: 142px;
+  color: #ffffff;
+}
+
+.h1-black{
+  font-size: 122px;
+  color: black;
+}
+
+h2{
+  font-size: 66px;
+  color: #828282;
+}
+
+h3{
+  font-size: 27px;
+  color: #ffffff;
+}
+
+h4{
+  font-size: 45px;
+}
+
+h5{
+  font-size: 26px;
+  color: #ffffff;
+}
+
+p{
+  font-size: 23px;
+}
+
+/* =================================
+1.zara larsson 
+==================================*/
+.zara{
+  position: relative;
+  width: 1440px;
+  margin-inline: auto;
+}
+
+.zara-text-container{
+  position: absolute;
+  left:12.9%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.zara-text-container h1{
+  line-height: 0.8;
+  margin: 0;
+  text-align: left;
+}
+
+.zara-text-container h5{
+  margin-top: -1px;
+  margin-bottom: 6px;
+  text-align: left;
+  
+}
+
+.icon-container{
+  display: flex;
+}
+
+.icon-container img{
+  padding-right: 1.3rem;
+}
+
+/* =================================
+2.all the time
+==================================*/
+#allthetime{
+  background-color: #F4F0E7;
+}
+
+.allthetime-container{
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  max-width: 1200px;
+  padding-block: 114px 98px;
+  margin-inline: auto;
+}
+
+.left{
+  margin-top: 14px;
+  width: 532px;
+}
+
+.logo-container{
+  margin-bottom: 40px;
+  align-items: left;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left p{
+  text-align: left;
+  word-break: break-all;
+}
+
+.right{
+  position: relative;
+  width: 485px;
+  height: 478px;
+}
+
+.back-square{
+  background-color: black;
+  width: 426px;
+  height: 426px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.yoko{
+  position: absolute;
+  width: 100%;
+  top: 14px;
+  right: 59px;
+  text-align: right;
+}
+
+.tate{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 71.5px;
+  right: 17.5px;
+  text-align: left;
+  rotate: 90deg;
+}
+
+.right img{
+  position:absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+}
+
+.right img{
+  max-height: 426px;
+}
+
+table, th, td{
+  border-collapse:collapse;
+  border: solid 4px black;
+}
+
+table{
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+}
+
+th{
+  padding-block: 5px;
+  width: 50%;
+}
+
+
+/* =================================
+3.dont miss out
+==================================*/
+.dontmissout{
+  position: relative;
+  WIDTH: 1440PX;
+  height: 585px;
+  margin-inline: auto;
+}
+
+.missout-img-container img{
+  filter: brightness(0.5);
+}
+
+.missout-text-container{
+  position: absolute;
+  top: 69px;
+  padding: 15px;
+  width: 100%;
+  margin-inline: auto;
+}
+
+.missout-text-container >h1{
+  font-size: 122px;
+}
+
+.missout-text-container >h4{
+  color: #ffffff;
+} 
+
+.missout-text-container >h5{
+  padding-top: 30px;
+  padding-bottom: 15px;
+  border-bottom: solid 4px #ffffff;
+  width: 465px;
+  margin-inline: auto;
+}
+
+#dontmissout button{
+  background-color: #0000004D;
+  color: #ffffff;
+  border: solid 2px #ffffff;
+  width: 228px;
+  height: 47px;
+  margin:50px auto;
+
+}
+
+
+/* =================================
+4.bandintown plugin
+==================================*/
+.bandintown{
+  background-color: #001627;
+  width: 100vw;
+  height: 792px;
+  position: relative;
+}
+
+.bandintown-container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 1202px;
+  height: 335px;
+  border: solid 2px #ffffff;
+  margin-inline: auto;
+  z-index: 5;
+}
+
+.bandintown-container>h1{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  padding-block: 100px;
+  background-color: #001627;
+  z-index: 10;
+  font-size:122px;
+  width: 960px
+}
+
+/* =================================
+5.footer
+==================================*/
+.footer-container{
+  display: flex;
+  justify-content: space-between;
+  padding: 80px 40px 40px 40px;
+  max-width: 1440px;
+  margin-inline: auto;
+  align-items: center;
+}
+
+.footer-left{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-left p span{
+  font-size: 32px;
+  font-weight: bold;
+  margin-right: 30px;
+}
+.footer-left p{
+  text-align: left;
+  line-height: 1.8rem;
+  font-size: 18px;
+}
+
+.footer-left p a{
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  border-bottom: #000000 solid 2px;
+}
+
+.footer-icon-container{
+  filter: invert(100%);
+}
+
+.footer-icon-container img{
+  padding-left: 10px;
+  width: 2.5rem;
+}
